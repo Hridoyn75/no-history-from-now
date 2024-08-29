@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="popup.css" />
+    <title>No History from now</title>
+    <style></style>
+  </head>
+  <body>
+    <div class="toggle-container">
+      <span class="toggle-label">No History from now</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="noHistoryToggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+    <button id="deleteAllHistory">Delete all history</button>
+
+    <div class="toggle-container" style="margin-top: 15px">
+      <span class="toggle-label">Use advanced filter</span>
+      <label class="toggle-switch">
+        <input type="checkbox" id="advancedFilterToggle" />
+        <span class="slider"></span>
+      </label>
+    </div>
+    <textarea
+      id="advancedFilterInput"
+      rows="12"
+      style="display: none"
+      placeholder="Add websites to auto-delete history 
+(one per line):
+
+Example:
+https://example.com
+https://another-site.com"
+    ></textarea>
+    <p>* URLs must start with http or https</p>
+    <script src="popup.js"></script>
+  </body>
+</html>

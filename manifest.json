@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "No History from now",
+  "description": "Keep your browsing private. Just turn it on and browse worry-free!",
+  "version": "1.0.1",
+  "icons": {
+    "16": "assets/icon.png",
+    "48": "assets/icon.png",
+    "128": "assets/icon.png"
+  },
+  "action": {
+    "default_title": "No History from now",
+    "default_popup": "popup/popup.html"
+  },
+  "permissions": ["history", "storage"],
+  "background": { "service_worker": "background.js" },
+  "content_scripts": [
+    {
+      "js": ["content/content.js"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
